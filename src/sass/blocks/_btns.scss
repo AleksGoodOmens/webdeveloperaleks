@@ -1,0 +1,17 @@
+.button {
+    border: none;
+    color: $main-light;
+    background-color: transparent;
+    padding: 12px 26px;
+    font-weight: 700;
+    transition: 0.2s;
+    &--active {
+        background-color: $secondary-red;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $secondary-orange;
+        }
+    }
+}

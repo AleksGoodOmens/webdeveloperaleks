@@ -1,0 +1,22 @@
+.social {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    a {
+        &:nth-child(3) {
+            transform: rotate(-90deg);
+        }
+    }
+    svg {
+        width: 23px;
+
+        path {
+            fill: $main-light;
+        }
+        &:hover {
+            path {
+                fill: $secondary-orange;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.section-title {
+    padding-top: 6px;
+    line-height: rem(24);
+    position: relative;
+    font-weight: 700;
+    @include circle-middle;
+    text-align: center;
+}
+.section-subtitle {
+    text-align: center;
+    color: $main-dark;
+    line-height: rem(24);
+    font-weight: 700;
+    margin-top: rem(25);
+}
+.devider {
+    max-width: 74px;
+    width: 100%;
+    height: 3px;
+    background-color: $secondary-orange;
+    margin: rem(25) auto 0 auto;
+}

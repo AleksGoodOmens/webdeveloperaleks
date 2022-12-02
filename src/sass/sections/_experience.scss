@@ -1,0 +1,117 @@
+.experience {
+    padding: 30px 0;
+    // .experience__list
+
+    &__list {
+        margin-top: rem(25);
+        list-style-type: none;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 21.5px;
+            width: 1px;
+            height: calc(100% - 21.5px);
+            background-color: $secondary-red;
+        }
+        &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            position: absolute;
+            top: 6px;
+            left: -7.5px;
+            background-color: $secondary-red;
+        }
+    }
+
+    // .experience__header
+
+    &__header {
+        font-size: rem(20);
+        line-height: rem(30);
+        font-weight: 700;
+        padding-left: 15px;
+    }
+
+    // .experience__item
+
+    &__item {
+        padding-left: 30px;
+        margin-bottom: 50px;
+    }
+
+    // .experience__item-header
+
+    &__item-header {
+        display: grid;
+        grid-template: repeat(2, auto) / 40px 1fr;
+        gap: 0 10px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 20px;
+            width: 30px;
+            height: 1px;
+            background-color: $secondary-red;
+        }
+    }
+
+    // .experience__icon
+
+    &__icon {
+        position: relative;
+        grid-row: 1/3;
+        @include circle;
+        &:before {
+            background-color: $secondary-red;
+        }
+        img {
+            position: absolute;
+            right: 0;
+            top: 20px;
+        }
+    }
+
+    // .experience__title
+
+    &__title {
+        font-size: rem(14);
+        margin-bottom: 0;
+    }
+
+    // .experience__subtitle
+
+    &__subtitle {
+        font-size: rem(12);
+    }
+
+    // .experience__item-list
+
+    &__item-list {
+        list-style-type: disc;
+        margin-top: rem(16);
+        li {
+            margin-left: 10px;
+        }
+    }
+
+    // .experience__item-li
+
+    &__item-li {
+        font-size: rem(10);
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 5px;
+    }
+}
+.section-title {
+}
+.section-subtitle {
+}
+.devider {
+}

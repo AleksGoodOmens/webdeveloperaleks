@@ -1,0 +1,31 @@
+.burger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 21px;
+    height: 21px;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+    &:focus {
+        outline: 2px $secondary-orange;
+    }
+    * {
+        width: 100%;
+        display: block;
+        height: 3px;
+        background-color: $secondary-orange;
+    }
+    span {
+        transition: 0.2s;
+        &:nth-child(2) {
+            margin: 6px 0;
+            width: 120%;
+            transform: translateX(-4.2px);
+        }
+        &:hover {
+            width: 130%;
+            transform: translateX(-6px);
+        }
+    }
+}

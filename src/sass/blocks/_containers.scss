@@ -1,0 +1,7 @@
+.container {
+    padding: 0 15px;
+    @include xl {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

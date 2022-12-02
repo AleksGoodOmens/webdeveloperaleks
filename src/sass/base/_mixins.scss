@@ -1,0 +1,57 @@
+@mixin circle {
+    &::before {
+        content: "";
+        width: rem(40);
+        height: rem(40);
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        background-color: $secondary-orange;
+    }
+}
+@mixin circle-middle {
+    &::before {
+        content: "";
+        width: rem(40);
+        height: rem(40);
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        background-color: $secondary-orange;
+    }
+}
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
