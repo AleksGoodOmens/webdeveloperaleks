@@ -1,20 +1,18 @@
 .experience {
     padding: 30px 0;
     // .experience__list
-
+    &__body {
+        @include md {
+            display: grid;
+            grid-template: auto / repeat(2, 1fr);
+            gap: 0 20px;
+        }
+    }
     &__list {
         margin-top: rem(25);
         list-style-type: none;
         position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 21.5px;
-            width: 1px;
-            height: calc(100% - 21.5px);
-            background-color: $secondary-red;
-        }
+
         &::after {
             content: "";
             width: 15px;
@@ -33,7 +31,7 @@
         font-size: rem(20);
         line-height: rem(30);
         font-weight: 700;
-        padding-left: 15px;
+        padding-left: 30px;
     }
 
     // .experience__item
@@ -41,6 +39,16 @@
     &__item {
         padding-left: 30px;
         margin-bottom: 50px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -17px;
+            width: 1px;
+            height: calc(100% + 50px);
+            background-color: $secondary-red;
+        }
     }
 
     // .experience__item-header

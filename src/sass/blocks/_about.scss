@@ -86,8 +86,8 @@
 
     &__card-icon {
         position: absolute;
-        left: 0;
-        bottom: -15px;
+        left: 15px;
+        bottom: -25px;
         path {
             fill: $main-light;
         }
@@ -111,6 +111,7 @@
     // .about__card-subtitle
 
     &__card-subtitle {
+        margin-top: 10px;
     }
 
     // .about__card-paragraph

@@ -1,8 +1,8 @@
 @mixin circle {
     &::before {
         content: "";
-        width: rem(40);
-        height: rem(40);
+        width: rem(36);
+        height: rem(36);
         display: block;
         border-radius: 100%;
         position: absolute;
@@ -15,8 +15,8 @@
 @mixin circle-middle {
     &::before {
         content: "";
-        width: rem(40);
-        height: rem(40);
+        width: rem(36);
+        height: rem(36);
         display: block;
         border-radius: 100%;
         position: absolute;

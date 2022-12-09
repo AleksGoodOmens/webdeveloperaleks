@@ -1,7 +1,9 @@
 .section-title {
     padding-top: 6px;
+    font-size: rem(16);
     line-height: rem(24);
     position: relative;
+    z-index: 2;
     font-weight: 700;
     @include circle-middle;
     text-align: center;

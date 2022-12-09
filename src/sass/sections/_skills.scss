@@ -1,0 +1,121 @@
+.skills {
+    // .skills__body
+
+    &__body {
+    }
+
+    // .skills__items
+
+    &__items {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: rem(14);
+    }
+
+    // .skills__item
+
+    &__item {
+        border: 1px solid $main-dark;
+        padding: 35px 30px 25px 30px;
+        margin: 0 auto 14px auto;
+        min-width: 260px;
+        @include sm {
+            flex: 1 0 268px;
+        }
+        @include md {
+            flex: 1 0 calc(50% - 14px);
+        }
+        @include lg {
+            flex: 1 0 calc(25% - 14px);
+            max-width: calc(33.33% - 14px);
+        }
+    }
+
+    // .skills__img
+
+    &__img {
+        height: 65px;
+        width: 170px;
+        margin-bottom: rem(14);
+        text-align: start;
+        // object-fit: contain;
+        img {
+            height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // .skills__name
+
+    &__name {
+        margin-bottom: rem(14);
+    }
+
+    // .skills__paragraph
+
+    &__paragraph {
+        font-size: rem(12);
+    }
+}
+
+.progress-bar {
+    // .progress-bar__items
+
+    &__items {
+        margin-top: 120px;
+        @include md {
+            display: grid;
+            grid-template: auto / repeat(2, 1fr);
+            gap: 0 40px;
+        }
+        @include lg {
+            grid-template: auto / repeat(3, 1fr);
+        }
+    }
+
+    // .progress-bar__item
+
+    &__item {
+        margin-bottom: 40px;
+    }
+
+    // .progress-bar__name
+
+    &__name {
+        position: relative;
+        @include circle;
+        display: inline-block;
+        width: calc(100% - 40px);
+        line-height: 200%;
+        padding-left: 15px;
+        &:before {
+            top: 0;
+        }
+    }
+
+    // .progress-bar__percentage
+
+    &__percentage {
+        display: inline-block;
+        width: 40px;
+        margin: 0 0 20px auto;
+        text-align: end;
+    }
+
+    // .progress-bar__progres
+
+    &__progres {
+        height: 12px;
+        background-color: $main-light;
+        border-radius: 4px;
+    }
+
+    // .progress-bar__filler
+
+    &__filler {
+        background-color: $secondary-orange;
+        height: 100%;
+        border-radius: 4px;
+    }
+}

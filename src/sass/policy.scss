@@ -1,0 +1,50 @@
+@import "libs/bootstrap-reboot.min";
+@import "base/variables";
+@import "base/functions";
+@import "base/mixins";
+
+body {
+    background-color: $main-dark;
+    color: $main-light;
+    font-size: 12px;
+    @include md {
+        font-size: 14px;
+    }
+    @include xl {
+        font-size: 16px;
+    }
+}
+h1 {
+    text-align: center;
+}
+ol {
+    padding-left: 2em;
+}
+ul {
+    padding-left: 1em;
+}
+a {
+    color: $secondary-red;
+}
+
+li + h2 {
+    &::marker {
+        color: $secondary-orange;
+    }
+}
+h2 {
+    color: $secondary-orange;
+}
+h3 {
+    color: $secondary-yellow;
+}
+li {
+    list-style: inherit;
+}
+.container {
+    padding: 0 15px;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+.first-list {
+}
