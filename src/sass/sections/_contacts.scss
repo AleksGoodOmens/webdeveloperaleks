@@ -2,6 +2,7 @@
     background-color: $main-dark;
     color: $main-light;
     padding: 50px 0;
+    overflow: hidden;
     // .contacts__photo
     &__container {
         @include md {
@@ -64,6 +65,14 @@
         font-size: rem(14);
         font-weight: 700;
     }
+    &__form {
+        .just-validate-error-label {
+            margin-top: 5px;
+            font-size: 12px;
+            width: 100%;
+            color: $secondary-orange;
+        }
+    }
 
     // .contacts__label
     &__input {
@@ -71,43 +80,114 @@
         padding: 14px 20px;
         border: 1px solid $main-light;
         margin-bottom: 42px;
+
+        input,
+        textarea {
+            width: 100%;
+            background-color: $main-dark;
+            border: none;
+            resize: none;
+            color: $main-light;
+            &#policy {
+                width: auto;
+            }
+        }
+        div {
+            width: 100%;
+            overflow: auto;
+            word-break: break-word;
+        }
+        &--file {
+            border: 1px solid $main-light;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            input {
+                width: 0;
+                height: 0;
+                font-size: 0;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+
+                button {
+                    background-color: transparent;
+                }
+            }
+            label {
+                font-size: 12px;
+                color: $main-light;
+                position: relative;
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                padding: 12px 26px;
+                font-weight: 700;
+                transition: 0.2s;
+                background-color: $secondary-red;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                transition: all 0.3s;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: $secondary-orange;
+                }
+                @include sm {
+                    font-size: 16px;
+                }
+                @include md {
+                    font-size: 14px;
+                }
+                @include lg {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-box {
+            @include lg {
+                display: flex;
+                gap: 5px;
+            }
+        }
         &--checkbox {
             border: none;
-            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
+            margin-bottom: 10px;
+            .just-validate-error-label {
+                position: absolute;
+                font-size: 12px;
+                top: -44px;
+                left: 0;
+                width: 100%;
+                color: $secondary-red;
+                text-align: center;
+                @include md {
+                    // top: 36px;
+                }
+                @include xl {
+                    top: -36px;
+                }
+            }
             @include md {
-                display: inline-block;
             }
             input {
+                display: inline-block;
                 background-color: $main-dark;
             }
             a {
                 color: $secondary-orange;
             }
             label {
-                flex: 0 0 160px;
                 font-size: 12px;
                 margin: 0;
+                display: inline-block;
             }
-        }
-        input,
-        textarea {
-            max-width: 100%;
-            background-color: $main-dark;
-            border: none;
-            color: $main-light;
-        }
-        textarea {
-            overflow-y: auto;
-            min-height: none;
-        }
-        div {
-            width: 100%;
-            overflow: auto;
-            word-break: break-word;
         }
     }
     &__label {
@@ -117,6 +197,9 @@
         left: 12px;
         top: -14px;
         background-color: $secondary-red;
+    }
+    &__button {
+        flex: 0 0 231px;
     }
     .button--active {
         margin: 0 auto;

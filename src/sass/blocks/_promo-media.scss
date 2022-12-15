@@ -5,11 +5,16 @@
         &__social {
             position: absolute;
             display: flex;
-            writing-mode: sideways-lr;
+            writing-mode: vertical-lr;
+
             align-items: center;
             gap: rem(16);
             margin: 0 10px 0 50px;
             font-weight: 700;
+        }
+        .rotate {
+            transform: rotate(180deg) !important;
+            transition: tra0;
         }
         // .promo__divider
 

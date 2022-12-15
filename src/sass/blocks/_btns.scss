@@ -15,3 +15,24 @@
         }
     }
 }
+.remover {
+    border-radius: 100%;
+    flex: 0 0 48px;
+    align-self: stretch;
+    text-align: center;
+    line-height: 200%;
+    border: 1px solid $secondary-red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    font-size: 22px;
+    @include md {
+        font-size: 16px;
+    }
+    &:hover {
+        background-color: $secondary-orange;
+        border-color: white;
+    }
+}
