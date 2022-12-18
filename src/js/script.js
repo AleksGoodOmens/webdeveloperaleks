@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // const file = document.querySelector('input[type="file"]');
-    // const remover = document.createElement('div');
-    // const label = file.nextElementSibling;
+    const file = document.querySelector('input[type="file"]');
+    const remover = document.createElement('div');
+    const label = file.nextElementSibling;
 
-    // inputFile();
+    inputFile();
     function inputFile() {
 
         file.addEventListener('change', (e) => {
@@ -123,71 +123,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //! forms
 
-    // const validate = new window.JustValidate('#form', {
-    //     errorLabelStyle: {
-    //     }
-    // });
-    // validate
-    //     .addField('#name', [
-    //         {
-    //             rule: 'minLength',
-    //             value: 3,
-    //         },
-    //         {
-    //             rule: 'maxLength',
-    //             value: 30,
-    //         },
-    //     ])
-    //     .addField('#email', [
-    //         {
-    //             rule: 'required',
-    //             errorMessage: 'Укажите Email',
-    //         },
-    //         {
-    //             rule: 'email',
-    //             errorMessage: 'Возможно вы допустили ошибку!',
-    //         },
-    //     ])
-    //     .addField('#message', [
-    //         {
-    //             rule: 'required',
-    //             errorMessage: 'Пожалуйста напишите хотя бы пару слов!',
-    //         },
-    //         {
-    //             rule: 'minLength',
-    //             value: 5,
-    //             errorMessage: 'Сообщение должно быть более 5 символов',
-    //         },
-    //     ])
-    //     .addField('#policy', [
-    //         {
-    //             rule: 'required',
-    //             errorMessage: 'Обязательно поставьте галочку, после ознакомления с политикой конфиденциальности',
-    //         }
-    //     ]).onSuccess((event) => {
-    //         let data = new FormData(event.target);
-    //         let xhr = new XMLHttpRequest();
-    //         const submBtn = event.target.querySelector('#submit-btn');
-    //         submBtn.textContent = 'Отправляется...';
-    //         submBtn.style.background = 'green';
-    //         xhr.onreadystatechange = function () {
-    //             if (xhr.readyState === 4) {
-    //                 if (xhr.status === 200) {
-    //                     console.log('Validation passes and form submitted');
-    //                     submBtn.textContent = 'Спасибо!';
-    //                     submBtn.style.background = 'green';
-    //                     remover.remove();
+    const validate = new window.JustValidate('#form', {
+        errorLabelStyle: {
+        }
+    });
+    validate
+        .addField('#name', [
+            {
+                rule: 'minLength',
+                value: 3,
+            },
+            {
+                rule: 'maxLength',
+                value: 30,
+            },
+        ])
+        .addField('#email', [
+            {
+                rule: 'required',
+                errorMessage: 'Укажите Email',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Возможно вы допустили ошибку!',
+            },
+        ])
+        .addField('#message', [
+            {
+                rule: 'required',
+                errorMessage: 'Пожалуйста напишите хотя бы пару слов!',
+            },
+            {
+                rule: 'minLength',
+                value: 5,
+                errorMessage: 'Сообщение должно быть более 5 символов',
+            },
+        ])
+        .addField('#policy', [
+            {
+                rule: 'required',
+                errorMessage: 'Обязательно поставьте галочку, после ознакомления с политикой конфиденциальности',
+            }
+        ]).onSuccess((event) => {
+            let data = new FormData(event.target);
+            let xhr = new XMLHttpRequest();
+            const submBtn = event.target.querySelector('#submit-btn');
+            submBtn.textContent = 'Отправляется...';
+            submBtn.style.background = 'green';
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log('Validation passes and form submitted');
+                        submBtn.textContent = 'Спасибо!';
+                        submBtn.style.background = 'green';
+                        remover.remove();
 
-    //                 }
-    //             }
-    //         };
+                    }
+                }
+            };
 
-    //         xhr.open('POST', 'mailer/smart.php', true);
-    //         xhr.send(data);
-    //         resetFileInput();
-    //         event.target.reset();
+            xhr.open('POST', 'phpMailer.php', true);
+            xhr.send(data);
+            resetFileInput();
+            event.target.reset();
 
-    //     });
+        });
 
     //! scroll Animations
     AOS.init(
@@ -212,4 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
             anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation;
         }
     );
+
+    console.log('ver 1.01');
 });

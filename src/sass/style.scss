@@ -31,6 +31,9 @@ a:hover {
 .overflow {
     overflow: hidden;
 }
+._overflowX {
+    overflow-x: hidden;
+}
 
 .fw700 {
     font-weight: 700;
@@ -43,15 +46,15 @@ a:hover {
 @import "blocks/page-title";
 @import "blocks/section-title";
 @import "blocks/social";
+@import "blocks/menu";
+@import "blocks/menu-media";
 
 // sections styles
 
-@import "blocks/menu";
-@import "blocks/menu-media";
-@import "blocks/promo";
-@import "blocks/promo-media";
-@import "blocks/about";
-@import "blocks/about-media";
+@import "sections/promo";
+@import "sections/promo-media";
+@import "sections/about";
+@import "sections/about-media";
 @import "sections/contacts";
 @import "sections/experience";
 @import "sections/skills";

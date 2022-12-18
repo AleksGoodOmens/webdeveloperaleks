@@ -3,20 +3,24 @@
     align-items: center;
     gap: rem(20);
     a {
-        &:nth-child(3) {
-            transform: rotate(-90deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 30px;
+            height: 30px;
+            path {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
-    svg {
-        width: 23px;
-
+    path {
+        fill: $main-light;
+    }
+    &:hover {
         path {
-            fill: $main-light;
-        }
-        &:hover {
-            path {
-                fill: $secondary-orange;
-            }
+            fill: $secondary-orange;
         }
     }
 }

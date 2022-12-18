@@ -15,7 +15,7 @@
         text-align: start;
         padding-left: 15px;
         &::before {
-            left: 15px;
+            left: 18px;
         }
     }
     .section-subtitle {
@@ -87,8 +87,17 @@
             border: none;
             resize: none;
             color: $main-light;
+            background: $main-dark;
+
             &#policy {
                 width: auto;
+            }
+            &:-webkit-autofill {
+                &:hover,
+                &:focus {
+                    background: blue;
+                    color: blue;
+                }
             }
         }
         div {
@@ -207,4 +216,11 @@
             display: inline-block;
         }
     }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $main-light;
+    -webkit-box-shadow: 0 0 0px 1000px $main-dark inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
