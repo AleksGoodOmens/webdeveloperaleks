@@ -1,5 +1,6 @@
 .container {
     padding: 0 15px;
+    overflow-x: hidden;
     @include xl {
         max-width: 1200px;
         margin: 0 auto;
