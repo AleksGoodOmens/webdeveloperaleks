@@ -78,7 +78,9 @@
         position: relative;
         padding: 14px 20px;
         border: 1px solid $main-light;
-        margin-bottom: 42px;
+        &:not(:last-child) {
+            margin-bottom: 42px;
+        }
 
         input,
         textarea {
