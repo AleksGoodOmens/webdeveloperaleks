@@ -177,8 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         submBtn.textContent = 'Спасибо!';
                         submBtn.style.background = 'green';
                         remover.remove();
-                    } else {
-                        console.log(this.response);
+
                     }
                 }
             };

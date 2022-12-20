@@ -14,13 +14,13 @@
                 height: 30px;
             }
         }
+        &:hover {
+            path {
+                fill: $secondary-orange;
+            }
+        }
     }
     path {
         fill: $main-light;
-    }
-    &:hover {
-        path {
-            fill: $secondary-orange;
-        }
     }
 }

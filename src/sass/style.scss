@@ -38,6 +38,9 @@ a:hover {
 .fw700 {
     font-weight: 700;
 }
+.white-spaces {
+    white-space: nowrap;
+}
 // individual blocks styles
 
 @import "blocks/btns";
@@ -47,12 +50,10 @@ a:hover {
 @import "blocks/section-title";
 @import "blocks/social";
 @import "blocks/menu";
-@import "blocks/menu-media";
 
 // sections styles
 
 @import "sections/promo";
-@import "sections/promo-media";
 @import "sections/about";
 @import "sections/about-media";
 @import "sections/contacts";

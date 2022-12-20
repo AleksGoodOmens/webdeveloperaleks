@@ -1,22 +1,50 @@
 .promo {
     // .promo__social
-    background: url(../img/main_bg.jpg) no-repeat center center / cover;
+    background: url(../img/main_bg.jpg) no-repeat 75% center / cover;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     color: $main-light;
-    padding-top: 200px;
+    display: grid;
+    align-items: center;
+    @include md {
+        grid-template-columns: auto 1fr;
+        gap: 10%;
+        .rotate {
+            transform: rotate(180deg) !important;
+        }
+        &__divider {
+            display: inline-block;
+            width: rem(1);
+            height: rem(70);
+            background-color: $main-light;
+            align-self: center;
+        }
+    }
     &__social {
         display: none;
-        a {
-            transform: rotate(-90deg);
-            svg:nth-child(3) {
-                transform: rotate(90deg);
+        @include md {
+            display: flex;
+            writing-mode: vertical-lr;
+            align-items: center;
+            gap: rem(16);
+            margin-left: 50px;
+            font-weight: 700;
+            a {
+                transform: rotate(-90deg);
+                svg:nth-child(3) {
+                    transform: rotate(90deg);
+                }
             }
         }
+    }
+    &__container {
     }
     // .promo__divider
     &__content {
         text-align: center;
+        @include md {
+            text-align: left;
+        }
     }
     &__section-title {
         max-width: fit-content;
@@ -28,6 +56,9 @@
         font-weight: 700;
         &::before {
             left: 3px;
+        }
+        @include md {
+            margin-left: 15px;
         }
     }
     &__section-name {
@@ -43,6 +74,9 @@
         margin-top: rem(30);
         font-size: rem(24);
         line-height: 100%;
+        @include md {
+            font-size: rem(48);
+        }
     }
 
     // .promo__subtitle
@@ -58,9 +92,13 @@
 
     &__btns {
         display: flex;
-        max-width: 555px;
+        gap: 1em;
         width: 100%;
         justify-content: center;
         margin-top: rem(65);
+        @include md {
+            justify-content: flex-start;
+            margin-top: rem(100);
+        }
     }
 }
