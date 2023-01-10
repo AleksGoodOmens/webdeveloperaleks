@@ -1,5 +1,5 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', () => {
+function burger() {
     const menu = document.querySelector('.menu'),
         body = document.querySelector('body'),
         burger = document.querySelector('.burger'),
@@ -52,4 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //         return touchEndX;
     //     });
     // }
-});
+}
+
+module.exports = burger;
